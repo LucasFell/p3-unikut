@@ -1,0 +1,53 @@
+package Logica;
+
+/**
+ *
+ * @author Lucas
+ */
+public class Conta implements Comparable<Conta> {
+
+    private String login;
+    private String nome;
+    private String senha;
+
+    public Conta(String login, String nome, String senha) {
+
+        this.login = login;
+        this.nome = nome;
+        this.senha = senha;
+
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getLogin() {
+        return this.login;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getSenha() {
+        return this.senha;
+    }
+
+    public String toString() {
+        return "O Login: " + this.login + "\nUsuario: " + this.nome + "\nSenha: " + this.senha;
+    }
+
+    @Override
+    public int compareTo(Conta C) {//comparacao de login.
+        return this.login.compareTo(C.login);
+    }
+}
